@@ -14,6 +14,12 @@
 		40C31A84ADD36C979D182C27 /* libPods-PerformanceTest-PerformanceTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B211E6AE0783A44B685DB7 /* libPods-PerformanceTest-PerformanceTestTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9D4294E0B10BDEABD9FCA7F9 /* libPods-PerformanceTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4DB48E9FFED5486E3AB276 /* libPods-PerformanceTest.a */; };
+		F1801649264A854400435719 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1801646264A84F500435719 /* Realm.framework */; };
+		F180164A264A854400435719 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1801646264A84F500435719 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F180164C264A854600435719 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1801645264A84F300435719 /* RealmSwift.framework */; };
+		F180164D264A854600435719 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1801645264A84F300435719 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F180167D264A874E00435719 /* RealmModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F180167C264A874E00435719 /* RealmModule.swift */; };
+		F1801680264A87D900435719 /* RealmModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F180167F264A87D900435719 /* RealmModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +31,21 @@
 			remoteInfo = PerformanceTest;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F180164B264A854400435719 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F180164D264A854600435719 /* RealmSwift.framework in Embed Frameworks */,
+				F180164A264A854400435719 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* PerformanceTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformanceTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +65,11 @@
 		E2B211E6AE0783A44B685DB7 /* libPods-PerformanceTest-PerformanceTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PerformanceTest-PerformanceTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EF70521EDDE3458C5886FBAC /* Pods-PerformanceTest-PerformanceTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerformanceTest-PerformanceTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PerformanceTest-PerformanceTestTests/Pods-PerformanceTest-PerformanceTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1801645264A84F300435719 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		F1801646264A84F500435719 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		F180167B264A874E00435719 /* PerformanceTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerformanceTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		F180167C264A874E00435719 /* RealmModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModule.swift; sourceTree = "<group>"; };
+		F180167F264A87D900435719 /* RealmModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1801649264A854400435719 /* Realm.framework in Frameworks */,
 				9D4294E0B10BDEABD9FCA7F9 /* libPods-PerformanceTest.a in Frameworks */,
+				F180164C264A854600435719 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +120,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				F180167C264A874E00435719 /* RealmModule.swift */,
+				F180167F264A87D900435719 /* RealmModule.m */,
+				F180167B264A874E00435719 /* PerformanceTest-Bridging-Header.h */,
 			);
 			name = PerformanceTest;
 			sourceTree = "<group>";
@@ -99,6 +130,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1801646264A84F500435719 /* Realm.framework */,
+				F1801645264A84F300435719 /* RealmSwift.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				3E4DB48E9FFED5486E3AB276 /* libPods-PerformanceTest.a */,
 				E2B211E6AE0783A44B685DB7 /* libPods-PerformanceTest-PerformanceTestTests.a */,
@@ -121,7 +154,6 @@
 				EF70521EDDE3458C5886FBAC /* Pods-PerformanceTest-PerformanceTestTests.debug.xcconfig */,
 				1AE89550804823B32D15DEE7 /* Pods-PerformanceTest-PerformanceTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,6 +217,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				67C6B9F26C0B03872D0E5293 /* [CP] Embed Pods Frameworks */,
 				594F72B55FAEACF6F91E7238 /* [CP] Copy Pods Resources */,
+				F180164B264A854400435719 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,7 +241,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -412,7 +445,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				F180167D264A874E00435719 /* RealmModule.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				F1801680264A87D900435719 /* RealmModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF70521EDDE3458C5886FBAC /* Pods-PerformanceTest-PerformanceTestTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1AE89550804823B32D15DEE7 /* Pods-PerformanceTest-PerformanceTestTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PerformanceTestTests/Info.plist;
@@ -486,6 +523,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PerformanceTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,8 +539,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PerformanceTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "PerformanceTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -511,6 +554,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PerformanceTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -523,7 +570,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PerformanceTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "PerformanceTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
